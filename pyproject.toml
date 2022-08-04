@@ -1,0 +1,19 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel",
+    "scikit-build==0.14.0",
+    "cmake>=3.18",
+    "nanobind @ git+https://github.com/brentyi/nanobind.git@master",
+    "ninja; platform_system!='Windows'",
+    "mypy"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+python_version = "3.8"
+ignore_missing_imports = true
+warn_unused_configs = true
