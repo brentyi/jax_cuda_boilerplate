@@ -1,15 +1,15 @@
 # jax_cuda_boilerplate
 
-Toy package containing boilerplate for combining custom CUDA kernels with JAX.
-Tested on an 2080 TI; experimental but may be useful as a reference.
+Toy package containing boilerplate for writing custom CUDA kernels for JAX.
+Tested on a 2080 TI; experimental but may be useful as a reference.
 
 Similar to [dfm/extending-jax](https://github.com/dfm/extending-jax), but:
 
 - Replaces deprecated CustomCall APIs with the latest MHLO equivalents.
-- Replaces `pybind11` with `nanobind`, which is lighter and faster.
+- Uses `pybind11` instead of `nanobind`, which is lighter and faster.
 - Uses `skbuild` to (significantly) simplify the `setup.py` script.
 - Implements a high-level API for indexing into n-dimensional GPU arrays.
-- Includs utilities for passing shape information from Python to C++. This is
+- Includes utilities for passing shape information from Python to C++. This is
   useful for both stride-based indexing and determining block and grid
   dimensions for kernels.
 
