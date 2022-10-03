@@ -6,7 +6,7 @@ Tested on a 2080 TI; experimental but may be useful as a reference.
 Similar to [dfm/extending-jax](https://github.com/dfm/extending-jax), but:
 
 - Replaces deprecated CustomCall APIs with the latest MHLO equivalents.
-- Uses `pybind11` instead of `nanobind`, which is lighter and faster.
+- Replaces `pybind11` with `nanobind`, which is lighter and faster.
 - Uses `skbuild` to (significantly) simplify the `setup.py` script.
 - Implements a high-level API for indexing into n-dimensional GPU arrays.
 - Includes utilities for passing shape information from Python to C++. This is
